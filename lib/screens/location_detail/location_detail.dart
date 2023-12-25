@@ -14,9 +14,8 @@ class LocationDetail extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               ImageBanner("assets/images/nature.jpg"),
-              TextSection(Colors.red),
-              TextSection(Colors.green),
-              TextSection(Colors.blue)
+              TextSection("summary",
+                  "Lorem ipsum dolor sit amet. Ut deserunt quia est officiis omnis qui molestiae asperiores vel debitis tempora hic autem modi aut repudiandae quia nam velit possimus. Et voluptas praesentium qui expedita delectus et rerum voluptates."),
             ]));
   }
 }
