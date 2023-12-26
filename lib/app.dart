@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  App({super.key});
+
+  List names = ["jay", "ray", "bray", "fay", "sway", "lupay"];
 
   @override
   Widget build(BuildContext context) {
@@ -23,41 +25,36 @@ class App extends StatelessWidget {
           elevation: 5,
           shadowColor: Colors.deepPurple[500],
         ),
-        // body: Center(
-        //   child: Container(
-        //     height: 300,
-        //     width: 300,
-        //     padding: EdgeInsets.all(25),
-        //     decoration: BoxDecoration(
-        //       color: Colors.deepPurple,
-        //       borderRadius: BorderRadius.circular(20),
-        //     ),
-        //     child: Icon(
-        //       Icons.favorite,
-        //       size: 100,
-        //       color: Colors.white,
-        //     ),
+        // body: ListView.builder(
+        //   itemCount: names.length,
+        //   itemBuilder: (context, index) => ListTile(
+        //     title: Text(names[index]),
         //   ),
         // ),
-        body: Column(
-          children: [
-            Expanded(
-              child: Container(
-                color: Colors.deepPurple,
-              ),
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.deepPurple[100],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.deepPurple[300],
-              ),
-            ),
-          ],
-        ),
+        // body: GridView.builder(
+        //     itemCount: 64,
+        //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
+        //     itemBuilder: (context, index) => Container(color: Colors.deepPurple, margin: EdgeInsets.all(2)))
+
+        // body: Column(
+        //   children: [
+        //     Expanded(
+        //       child: Container(
+        //         color: Colors.deepPurple,
+        //       ),
+        //     ),
+        //     Expanded(
+        //       child: Container(
+        //         color: Colors.deepPurple[100],
+        //       ),
+        //     ),
+        //     Expanded(
+        //       child: Container(
+        //         color: Colors.deepPurple[300],
+        //       ),
+        //     ),
+        //   ],
+        // ),
       ),
     );
   }
