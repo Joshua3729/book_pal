@@ -5,6 +5,10 @@ class App extends StatelessWidget {
 
   List names = ["jay", "ray", "bray", "fay", "sway", "lupay"];
 
+  void userTappedHandler() {
+    print("User tapped");
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,6 +59,27 @@ class App extends StatelessWidget {
         //     ),
         //   ],
         // ),
+
+        // body: Stack(
+        //   alignment: Alignment.center,
+        //   children: [
+        //     Container(height: 300, width: 300, color: Colors.deepPurple),
+        //     Container(height: 200, width: 200, color: Colors.deepPurple[400]),
+        //     Container(height: 100, width: 100, color: Colors.deepPurple[300]),
+        //   ],
+        // ),
+
+        body: Center(
+          child: GestureDetector(
+            onTap: userTappedHandler,
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple,
+              child: Center(child: Text("Tap me")),
+            ),
+          ),
+        ),
       ),
     );
   }
